@@ -1,4 +1,4 @@
-Dog recommendations website using React.js and decision tree
+##Dog recommendations website using React.js and decision tree
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
