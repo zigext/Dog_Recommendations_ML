@@ -41,7 +41,7 @@ class QuizPage extends Component {
     render() {
         return (
             <div style={styles.container}>
-                <h3 style={styles.headerText}>Every dog deserves more than a loving home – they deserve the right loving home. Find the best match for your family.</h3>
+                <h2 style={styles.headerText}>Every dog deserves more than a loving home – they deserve the right loving home. Find the best match for your family.</h2>
 
                 <div style={styles.quizContainer}>
                     <div style={styles.questionContainer}>
@@ -417,13 +417,15 @@ const styles = {
     },
     labelRadioButton: {
         color: 'black',
+        fontSize: 18
     },
     text: {
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 19
     },
     headerText: {
-        color: 'white',
+        color: '#fcb214',
         textAlign: 'center'
     },
     button: {

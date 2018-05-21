@@ -12,7 +12,7 @@ let dt = new ml.DecisionTree({
 })
 dt.build()
 
-console.log("Classify : ", dt.classify(["house", "yard_small", false, false, 0, "active_medium", "energy_medium", 30, "bark_small", "long", 7, "size_small", false]))
+console.log("Classify : ", dt.classify(["house", "yard_small", false, false, 8, "active_none", "energy_small", 0, "bark_small", "long", 7, "size_small", false]))
 
 class QuizPage extends Component {
     constructor(props){

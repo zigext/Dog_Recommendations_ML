@@ -49,6 +49,12 @@ const DALMATIAN = {
     info: 'Best known as the star of Disney’s 101 Dalmatians, this sleek and athletic dog breed has a history that goes back several hundred years. He started out as a coach dog but has also served in many other capacities, including hunter, firehouse dog, and circus performer. As charming in life as in film, he goes from gallant to goofy to gallant again in the blink of an eye, and loves to be a part of everything his family does.'
 }
 
+const DOBERMAN = {
+    breed: 'Doberman Pinscher',
+    img: 'http://www.educ4pattes.com/chiens/wp-content/uploads/2014/05/doberman-893931_1280-1280x640.jpg',
+    info: 'The Doberman Pinscher was developed in Germany during the late 19th century, primarily as a guard dog. His exact ancestry is unknown, but he’s believed to be a mixture of many dog breeds, including the Rottweiler, Black and Tan Terrier, and German Pinscher. With his sleek coat, athletic build, and characteristic cropped ears and docked tail, the Doberman Pinscher looks like an aristocrat. He is a highly energetic and intelligent dog, suited for police and military work, canine sports, and as a family guardian and companion.'
+}
+
 const FRENCH_BULLDOG = {
     breed: 'French Bulldog',
     img: 'http://cdn2-www.dogtime.com/assets/uploads/gallery/french-bulldog-dog-breed-pictures/2-whitelaying.jpg',
@@ -179,6 +185,9 @@ class Result extends Component {
             case 'dalmatian':
                 this.data = DALMATIAN
                 break
+            case 'doberman':
+                this.data = DOBERMAN
+                break
             case 'french bulldog':
                 this.data = FRENCH_BULLDOG
                 break
@@ -235,14 +244,15 @@ class Result extends Component {
         return (
             <div style={styles.container}>
                 <div style={styles.innerContainer}>
-                    You got {this.data.breed}
+                    <h2>You got {this.data.breed} ! </h2>
                     <img src={this.data.img} style={styles.img} />
-                    {this.data.info}
+                    <p style={styles.text}>{this.data.info}</p>
 
                     <RaisedButton
                         label="Try Again"
                         primary={true}
                         style={styles.button}
+                        labelStyle={styles.label}
                         onClick={this.props.resetState} />
                 </div>
             </div>
@@ -268,6 +278,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        alignItems: 'center'
 
     },
     button: {
@@ -275,6 +286,14 @@ const styles = {
         marginTop: 30
     },
     img: {
-        margin: 25
+        margin: 25,
+        height: 500,
+        width: '70%'
+    },
+    text: {
+        fontSize: 18
+    },
+    label: {
+        fontSize: 21
     }
 }

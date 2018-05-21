@@ -12,9 +12,13 @@ const styles = {
     },
     button: {
         margin: 12,
+        marginTop: 20
     },
     img: {
         width: '50%'
+    },
+    label: {
+        fontSize: 21
     }
 }
 
@@ -27,6 +31,7 @@ class HomePage extends Component {
                     label="Find your dream dog"
                     primary={true}
                     style={styles.button}
+                    labelStyle={styles.label}
                     onClick={() => window.location.href = "/quiz"} />
             </div>
         )
